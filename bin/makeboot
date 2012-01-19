@@ -1,0 +1,4 @@
+#!/bin/bash
+
+./mkbootimg --cmdline "console=ttyO2,115200n8 mem=463M@0x80000000 init=/init vram=12M omapfb.vram=0:12M" --base 0x80000000 -o $(date +%F-%T)-boot.img --kernel $1 --ramdisk $2
+
